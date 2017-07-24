@@ -1,0 +1,6 @@
+celery==3.1.25
+python
+python-django
+mongo
+djangorestframework
+python pip

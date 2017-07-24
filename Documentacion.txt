@@ -1,0 +1,25 @@
+Management api
+
+# Admin
+
+user: romel
+pass: plataforma
+
+#usuario
+
+user: programador1
+pass: analista1
+
+
+# Comando para lanzar servidor 
+
+python manage.py runserver 8080
+
+# Comando para ver el funcionamiento de celery
+
+python manage.py celery worker -A management.celery --loglevel=info
+
+
+# Comando para ver el estado de un job
+
+python manage.py celery -A management.celery result 96cce812-f928-4e33-9d2d-02edf32fbd94
