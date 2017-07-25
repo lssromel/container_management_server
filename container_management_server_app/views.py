@@ -27,7 +27,9 @@ def logout_user(request):
 @login_required
 @api_view(['POST'])
 def inicio_tarea(request):
-
-    archivo = request.data['file']
-    resultado = up_file_start_task(archivo)
+    script = request.data['script']
+    type_script = request.data['type_script']
+    container_name = request.data['container_name']
+    name_table = request.data['name_table']
+    resultado = up_file_start_task(script)
     return HttpResponse("su ide de job es : "+resultado.id)
